@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/image/icon.png') }}">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,6 +61,25 @@
                 text-transform: uppercase;
             }
 
+            input {
+                color: #636b6f;
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            input:hover {
+                /* color: #636b6f; */
+                background: red;
+                color: #fff;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -66,9 +88,16 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+                        
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <!-- <a href="{{ url('/home') }}">Home</a> -->
+                    
+                        <form action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                            <input class="btn btn-danger" type="submit" value="Logout">
+                        </form>
+                        
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

@@ -4,8 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class='cover'>
+                <img src="{{ asset('assets/image/cover.png')}}">
+            </div>
+
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">Pendaftaran Peserta</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -31,11 +35,11 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                <!-- @error('password')
+                                @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror -->
+                                @enderror
                             </div>
                         </div>
 
@@ -57,7 +61,7 @@
                             <label for="nik" class="col-md-4 col-form-label text-md-right">NIK</label>
 
                             <div class="col-md-6">
-                                <input id="nik" type="text" class="form-control @error('name') is-invalid @enderror" name="nik" value="" required autocomplete="nik" autofocus>
+                                <input id="nik" type="text" class="form-control @error('nik') is-invalid @enderror" name="nik" value="" required autocomplete="nik" autofocus>
 
                                 @error('nik')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +75,7 @@
                             <label for="nomer" class="col-md-4 col-form-label text-md-right">Nomer Handphone</label>
 
                             <div class="col-md-6">
-                                <input id="nomer" type="text" class="form-control @error('name') is-invalid @enderror" name="nomer" value="" required autocomplete="nomer" autofocus>
+                                <input id="nomer" type="text" class="form-control @error('nomer') is-invalid @enderror" name="nomer" value="" required autocomplete="nomer" autofocus>
 
                                 @error('nomer')
                                     <span class="invalid-feedback" role="alert">
@@ -85,7 +89,7 @@
                             <label for="kota" class="col-md-4 col-form-label text-md-right">Alamat</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="text" class="form-control @error('name') is-invalid @enderror" name="alamat" value="" required autocomplete="alamat" autofocus>
+                                <input id="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="" required autocomplete="alamat" autofocus>
 
                                 @error('alamat')
                                     <span class="invalid-feedback" role="alert">
@@ -98,7 +102,7 @@
                             <label for="kota" class="col-md-4 col-form-label text-md-right">Kota</label>
 
                             <div class="col-md-6">
-                                <input id="kota" type="text" class="form-control @error('name') is-invalid @enderror" name="kota" value="" required autocomplete="kota" autofocus>
+                                <input id="kota" type="text" class="form-control @error('kota') is-invalid @enderror" name="kota" value="" required autocomplete="kota" autofocus>
 
                                 @error('kota')
                                     <span class="invalid-feedback" role="alert">

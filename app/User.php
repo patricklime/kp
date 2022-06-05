@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       'nik','email','password', 'nama_lengkap','nomer_hp','alamat','kota','foto_ktp','pas_foto','dokumen_ijazah','dokumen_ksk',
+       'nik','email','password', 'nama_lengkap','nomer_hp','alamat','kota',
     ];
 
     /**
@@ -36,4 +36,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $primaryKey = 'nik';
 }
