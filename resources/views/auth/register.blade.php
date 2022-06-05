@@ -61,7 +61,7 @@
                             <label for="nik" class="col-md-4 col-form-label text-md-right">NIK</label>
 
                             <div class="col-md-6">
-                                <input id="nik" type="text" class="form-control @error('nik') is-invalid @enderror" name="nik" value="" required autocomplete="nik" autofocus>
+                                <input id="nik" type="text" class="form-control @error('nik') is-invalid @enderror" name="nik" value="{{ old('nik') }}" required autocomplete="nik" autofocus>
 
                                 @error('nik')
                                     <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
                             <label for="nomer" class="col-md-4 col-form-label text-md-right">Nomer Handphone</label>
 
                             <div class="col-md-6">
-                                <input id="nomer" type="text" class="form-control @error('nomer') is-invalid @enderror" name="nomer" value="" required autocomplete="nomer" autofocus>
+                                <input id="nomer" type="text" class="form-control @error('nomer') is-invalid @enderror" name="nomer" value="{{ old('nomer') }}" required autocomplete="nomer" autofocus>
 
                                 @error('nomer')
                                     <span class="invalid-feedback" role="alert">
@@ -89,7 +89,7 @@
                             <label for="kota" class="col-md-4 col-form-label text-md-right">Alamat</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="" required autocomplete="alamat" autofocus>
+                                <input id="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ old('alamat') }}" required autocomplete="alamat" autofocus>
 
                                 @error('alamat')
                                     <span class="invalid-feedback" role="alert">
@@ -102,7 +102,7 @@
                             <label for="kota" class="col-md-4 col-form-label text-md-right">Kota</label>
 
                             <div class="col-md-6">
-                                <input id="kota" type="text" class="form-control @error('kota') is-invalid @enderror" name="kota" value="" required autocomplete="kota" autofocus>
+                                <input id="kota" type="text" class="form-control @error('kota') is-invalid @enderror" name="kota" value="{{ old('kota') }}" required autocomplete="kota" autofocus>
 
                                 @error('kota')
                                     <span class="invalid-feedback" role="alert">
